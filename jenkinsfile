@@ -6,11 +6,12 @@ pipeline {
         SSH_CREDENTIAL = 'node-app-key'
         REPO_URL       = 'https://github.com/rbhusare829/node-js-app-CICD.git'
         BRANCH         = 'main'
-        REMOTE_USER    = 'ec2-user'             // FIXED
-        REMOTE_PATH    = '/home/ec2-user/node-app'  // FIXED
+        REMOTE_USER    = 'ubuntu'
+        REMOTE_PATH    = '/home/ubuntu/node-app'
     }
 
     stages {
+
         stage('Clone Repository') {
             steps {
                 git branch: "${BRANCH}", url: "${REPO_URL}"
