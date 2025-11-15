@@ -6,8 +6,8 @@ pipeline {
         SSH_CREDENTIAL = 'node-app-key'
         REPO_URL       = 'https://github.com/rbhusare829/node-js-app-CICD.git'
         BRANCH         = 'main'
-        REMOTE_USER    = 'ubuntu'
-        REMOTE_PATH    = '/home/ubuntu/node-app'
+        REMOTE_USER    = 'ec2-user'             // FIXED
+        REMOTE_PATH    = '/home/ec2-user/node-app'  // FIXED
     }
 
     stages {
@@ -52,4 +52,3 @@ pipeline {
         }
     }
 }
-
